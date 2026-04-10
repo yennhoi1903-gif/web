@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>12C10 - Thanh xuân</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #2c5364, #ff4d88);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+/* nền chuyển động */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+th {
+    background: rgba(0,0,0,0.4);
+}
+
+/* highlight */
+.highlight {
+    background: #ff4d88 !important;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff4d88;
+}
+
+.green { background: #6cc24a; color: black; }
+.yellow { background: #ffe600; color: black; }
+
+/* card */
+.card {
+    background: rgba(255,255,255,0.1);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+}
+
+/* heart */
+.heart {
+    position: fixed;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-10vh); opacity: 0; }
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff4d88;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎓 12C10 - Thanh xuân tụi mình</h1>
+<h2 id="now">📚 Đang xác định môn học...</h2>
+
+<div class="card">
+💌 Chúng ta đã cùng nhau đi qua một hành trình thật đẹp...  
+Dù sau này mỗi người một nơi, mong rằng 12C10 sẽ luôn ở trong tim 💖
+</div>
+
+<table>
+<tr>
+<th>Buổi</th><th>Tiết</th><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th>
+</tr>
+
+<tr><td rowspan="5">Sáng</td><td>1</td>
+<td data-day="1" data-period="1">📝 Sinh hoạt</td>
+<td data-day="2" data-period="1">🏃 GDTC</td>
+<td data-day="3" data-period="1">🧮 Toán</td>
+<td data-day="4" data-period="1">🌍 GDĐP</td>
+<td data-day="5" data-period="1">🧪 Hóa</td>
+</tr>
+
+<tr><td>2</td>
+<td data-day="1" data-period="2">📝 Sinh hoạt</td>
+<td data-day="2" data-period="2">🏃 GDTC</td>
+<td data-day="3" data-period="2">🎯 HĐTN</td>
+<td data-day="4" data-period="2">🧪 Hóa</td>
+<td data-day="5" data-period="2">🧪 Hóa</td>
+</tr>
+
+<tr><td>3</td>
+<td data-day="1" data-period="3">🇬🇧 Anh</td>
+<td data-day="2" data-period="3">🏃 GDTC</td>
+<td data-day="3" data-period="3">🧬 Sinh</td>
+<td data-day="4" data-period="3">💻 Tin</td>
+<td data-day="5" data-period="3">🎯 HĐTN</td>
+</tr>
+
+<tr><td>4</td>
+<td data-day="1" data-period="4">🇬🇧 Anh</td>
+<td data-day="2" data-period="4">🏃 GDTC</td>
+<td data-day="3" data-period="4">📜 Sử</td>
+<td data-day="4" data-period="4">💻 Tin</td>
+<td data-day="5" data-period="4">⚡ Lý</td>
+</tr>
+
+<tr><td>5</td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr><td rowspan="5">Chiều</td><td>1</td>
+<td data-day="1" data-period="6">⚡ Lý</td>
+<td data-day="2" data-period="6">🧬 Sinh</td>
+<td data-day="3" data-period="6">📖 Văn</td>
+<td data-day="4" data-period="6">🏃 GDTC</td>
+<td data-day="5" data-period="6">🧮 Toán</td>
+</tr>
+
+<tr><td>2</td>
+<td data-day="1" data-period="7">⚡ Lý</td>
+<td data-day="2" data-period="7">🎯 HĐTN</td>
+<td data-day="3" data-period="7">📖 Văn</td>
+<td data-day="4" data-period="7">🏃 GDTC</td>
+<td data-day="5" data-period="7">🧮 Toán</td>
+</tr>
+
+<tr><td>3</td>
+<td data-day="1" data-period="8">📖 Văn</td>
+<td data-day="2" data-period="8">🪖 GDQP</td>
+<td data-day="3" data-period="8">🇬🇧 Anh</td>
+<td data-day="4" data-period="8">🔥 Toán ÔTTN</td>
+<td data-day="5" data-period="8">🧮 Toán</td>
+</tr>
+
+</table>
+
+<script>
+/* giờ học */
+const schedule = [
+    {start:"07:00",end:"07:45",period:1},
+    {start:"07:50",end:"08:35",period:2},
+    {start:"08:40",end:"09:25",period:3},
+    {start:"09:30",end:"10:15",period:4},
+    {start:"13:00",end:"13:45",period:6},
+    {start:"13:50",end:"14:35",period:7},
+    {start:"14:40",end:"15:25",period:8},
+];
+
+function getCurrentPeriod(){
+    let now=new Date();
+    let current=now.getHours()*60+now.getMinutes();
+
+    for(let s of schedule){
+        let [sh,sm]=s.start.split(":").map(Number);
+        let [eh,em]=s.end.split(":").map(Number);
+        let start=sh*60+sm;
+        let end=eh*60+em;
+        if(current>=start && current<=end) return s.period;
+    }
+    return null;
+}
+
+function update(){
+    let today=new Date().getDay();
+    let period=getCurrentPeriod();
+
+    document.querySelectorAll("td").forEach(td=>{
+        td.classList.remove("highlight");
+    });
+
+    if(today>=1 && today<=5 && period){
+        let cell=document.querySelector(`td[data-day="${today}"][data-period="${period}"]`);
+        if(cell){
+            cell.classList.add("highlight");
+            document.getElementById("now").innerText="📚 Đang học: "+cell.innerText;
+        }
+    } else {
+        document.getElementById("now").innerText="😴 Đang nghỉ hoặc không có tiết";
+    }
+}
+
+setInterval(update,1000);
+update();
+
+/* tim + icon bay */
+const icons=["💖","✨","🎓","🌸","🔥"];
+
+setInterval(()=>{
+    let el=document.createElement("div");
+    el.className="heart";
+    el.innerText=icons[Math.floor(Math.random()*icons.length)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.fontSize=(10+Math.random()*20)+"px";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),5000);
+},500);
+</script>
+
+</body>
+</html>
